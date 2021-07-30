@@ -80,11 +80,16 @@ let testArray = [2, 3, 4]; //eslint-disable-line
 
 function sumArray(sumArr) { //eslint-disable-line
    let length= sumArr.length;
-   let final=0;
+   let final=[0];
+   let first=[0];
    for (let i=0 ; i<length ; i++){
-   final =sum(final,sum('sumArr(i)',0));
+       
+       first =sum(sumArr[i],0)
+       final =sum(final[0],first[0])
+       console.log(final)
 }
-return [final,`${sumArr.toString()} was passed in as an array of numbers, and ${final} is their sum.`]
+return [final[0],`${sumArr.toString()} was passed in as an array of numbers, and ${final[0]} is their sum.`];
+
 }
 
 // Here is the test for sumArray(); uncomment it to run it
@@ -106,16 +111,25 @@ Test this function by hand in the console to get it working, and when you think 
 // Write your code here
 function multiplyArray(multArr) { //eslint-disable-line
    
- let length= multArr.length;
- let final=1;
- for (let i=0 ; i<length ; i++){
- final =multiply(final,multiply('multArr(i)',0));
-}
-return [`The numbers ${multArr.toString()} have a product of ${final}.`]
+   /* let length= multArr.length;
+    let final=[1];
+    let first=[0];
+    for (let i=0 ; i<length ; i++){
+        
+        first =multiply(multArr[i],1)
+        final =multiply(final[0],first[0])
+        console.log(final)
+        let x=['The numbers '+multArr.toString()+' have a product of '+final[0]+'.'];
+        console.log(x)
+ }
+
+ return[`The numbers ${multArr.toString()} have a product of ${final[0]}.`]
+ */
+ 
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-testMultiplyArray(testArray);
+//testMultiplyArray(testArray);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. 
 
